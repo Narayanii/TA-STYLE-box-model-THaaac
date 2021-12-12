@@ -6,3 +6,169 @@
 - Using CSS resets is necessary.
 - Use semantic tags and keep the nesting and indentation proper.
 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>assignment | box model</title>
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<header class="heading"></header>Excercise Two</header>
+
+
+<body>
+<nav class="boxone"></nav>
+ <div class="boxtwo"> </div>
+  <div class="boxthree"></div>
+  <nav class="boxfour"></nav>
+  <div class="boxfive"></div>
+
+  <br>
+  
+
+  <p class= "boxpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ratione mollitia ullam vero! Magnam vitae fuga rem odit laudantium! Iusto non eaque nesciunt quo vero, id assumenda blanditiis nam eius.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam, totam reprehenderit velit sequi delectus, corrupti, nesciunt enim provident consequuntur aspernatur odit iusto soluta labore natus omnis! Blanditiis, nam odio!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deleniti voluptas commodi excepturi ipsam cumque, deserunt iure ea illo? Tempore a voluptates ea cumque reprehenderit molestiae ad debitis expedita! Alias?
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quidem consequuntur eligendi, numquam velit expedita. Laborum repellat exercitationem nesciunt autem, et reiciendis consequuntur ducimus, libero nisi, harum quam asperiores inventore?
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus libero reiciendis perferendis, eos voluptate quo perspiciatis tempore velit, excepturi vel sequi facilis dignissimos nulla possimus! Est expedita voluptatibus error architecto?
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam non eaque soluta ullam sint quos nemo, ut quod, nesciunt perspiciatis quisquam inventore esse temporibus quibusdam odit asperiores voluptatum voluptas id. </p>
+    
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</body>
+</html>
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+ 	border-spacing: 0;
+}
+/* Coustom Style */
+
+.heading { padding: 20px;
+
+}
+.boxone { 
+width: 100px;
+height: 80px;
+background-color: red;
+margin-top: 50px;
+margin-left: 30px;
+border: solid black;
+}
+
+.boxtwo {
+width: 100px;
+height: 80px;
+background-color: red;
+float: left;
+margin-top: 50px;
+margin-left: 30px;
+border:  6px dashed black;
+
+}
+
+.boxthree {
+width: 100px;
+height: 80px;
+float: right;
+background-color: red;
+margin-top: 50px;
+margin-right: 1095px;
+border: 2px solid black;
+outline: 3px solid red;
+
+}
+
+.boxfour {
+width: 100px;
+height: 80px;
+float: right;
+background-color: red;
+margin-top: 50px;
+margin-right: 91%;
+border: 8px dotted black;
+}
+
+.boxfive {
+width: 100px;
+height: 80px;
+margin-left : 17%;
+background-color: red;
+margin-top: 200px;
+}
+
+
+.boxpara { font-size: normal;
+background-color: red;
+width: 300px;
+border-bottom: solid yellow;
+border-width: 10px;
+border-left: solid green;
+border-width: 10px;
+border-top: solid blue;
+border-width: 10px;
+border-right: solid gray;
+border-width: 10px;
+outline: solid purple;
+outline-width: 20px;
+
+ display: inline;
+float: right;
+margin-right: 70%;
+margin-top: 20px;
+margin-left: 50px;
+line-height: 15px;
+margin-bottom: 18px;
+
+} 
