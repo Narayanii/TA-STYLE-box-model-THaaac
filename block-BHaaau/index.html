@@ -1,0 +1,381 @@
+<!---
+### Create a page according to the layout shown below
+
+![Box Model Exercise 6](https://raw.githubusercontent.com/suraj122/AC-STYLE-images/master/box-model/ex-6.png)
+
+#### Problems for exercise 2 in the layout
+
+- Each parent container has width of 600px and border of 1px;
+- Each children box has width 180px and height 100px as well as margin of 10px;
+- Each child box which is having border has border-width 1px.
+- Note in the first container the boxes do not have any border.
+
+- Using CSS resets is necessary.
+- Use semantic tags and keep the nesting and indentation proper.
+--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <title></title>
+</head>
+<header>
+<body>
+<h1>The Box Model, Box-sizing & Box-shadow</h1>
+</header>
+<main>
+<div>
+
+<div class="line"></div>
+<h2> Excercise1</h2>
+<div class=boxone></div>
+</div>
+
+<div class="cricle-parent">
+<div class="cricle1"></div>
+<div class="cricle2"></div>
+<div class="cricle3"></div>
+<div class="cricle4"></div> 
+</div>
+<br>
+<div class="line2"></div>
+<h2>Excercise2</h2>
+<p>no border on these boxes.</p>
+
+<div class="parent">
+<div class="graybox1"></div>
+<div class="graybox2"></div>
+<div class="graybox3"></div>
+</div>
+<div class="boxborder"></div>
+<div class="line3"></div>
+
+<p class="text">1 px border on these boxes</p>
+
+<div class="border-parent">
+<div class="borderbox1"></div>
+<div class="borderbox2"></div>
+<div class="borderbox3"></div>
+</div>
+<div class="line4"></div>
+<p class="linetext"1>px border on these boxes but they are in same line.</p>
+
+<div class="parent-two">
+<div class="box-one"></div>
+<div class="box-two"></div>
+<div class="box-three"></div>
+</div>
+
+ </main>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+</body>
+</html>
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Coustome Style */
+
+h1 { font-size: 20px; 
+font-variant: small-caps;
+text-align: center;
+margin: 20px;
+
+}
+
+.line {
+border-bottom: 2px dashed gray;
+margin-left: 550px;
+width: 400px;
+
+}
+h2 { font-variant: small-caps;
+
+margin-top: 30px;
+margin-left: 700px;
+}
+
+.boxone { background-color: cornsilk;
+width: 100px;
+height: 100px;
+border:rgb(76, 192, 192) 8px solid;
+outline: palevioletred 10px solid;
+outline-offset: 10px solid black;
+margin-left: 48%;
+margin-top: 30px;
+position: relative;
+
+}
+
+.boxone::before { content: " ";
+position: absolute;
+top: 6px;
+right: 6px;
+left: 6px;
+bottom: 1px;
+border: 2px solid black;
+width: 115px;
+height: 115px;
+top: -10px;
+left: -10px;
+} 
+.cricle-parent { margin-top: 15px;
+text-align: center;
+}
+
+.cricle1 {  width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: cornsilk;
+margin-right: 80px;
+margin-top: 10px;
+display: inline-block;
+position: relative;
+}
+.cricle1::after {
+content: "content";
+position: absolute;
+font-size: 10px;
+margin-left: 25px;
+margin-top: 5px;
+
+}
+
+.cricle2 { width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: rgb(76, 192, 192);
+margin-top: 30px;
+margin-right: 90px;
+display: inline-block;
+position: relative;
+}
+.cricle2::after{
+content: "padding";
+position: absolute;
+font-size: 10px;
+margin-left: 25px;
+margin-top: 5px;
+}
+.cricle3 {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: black;
+display: inline-block;
+position: relative;
+}
+.cricle3::after{
+content: "border";
+position: absolute;
+font-size: 10px;
+margin-left: 25px;
+margin-top: 5px;
+}
+.cricle4 {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: palevioletred;
+display: inline-block;
+margin-left: 55px;
+position: relative;
+}
+.cricle4::after { content: "margin";
+ position: absolute;
+ font-size: 10px;
+ margin-left: 25px;
+ margin-top: 5px;
+}
+.line2 {
+border-bottom: 2px dashed gray;
+padding: 20px;
+margin-left: 550px;
+width: 400px;
+}
+
+p {
+text-align: center;
+margin-left: 18px;
+}
+.parent { border: 2px solid gray;
+text-align: center;
+display: inline-block;
+margin-left: 34%;
+margin-top: 5px;
+padding: 10px;
+}
+
+.graybox1 {
+width: 140px;
+height: 70px;
+background-color: gray;
+margin-left: 10px;
+margin-top: 5px;
+display: inline-block;
+
+}
+.graybox2 {
+width: 140px;
+height: 70px;
+background-color: gray;
+display: inline-block;
+
+}
+
+.graybox3 {
+width: 140px;
+height: 70px;
+background-color: gray;
+display: inline-block;
+
+}
+ 
+
+.line3 {
+border-bottom: 2px dashed gray;
+width: 350px;
+margin-left: 550px;
+margin-top: 15px;
+}
+.text {
+margin-top: 30px;
+}
+
+.border-parent { 
+margin-top: 20px;
+border: 2px solid gray;
+width: 500px;
+display: inline-block;
+margin-left: 33%;
+
+}
+
+.borderbox1 {
+width: 140px;
+height: 80px;
+margin-top: 5px;
+margin-left: 5px;
+background-color: gray;
+border: 1px solid black;
+display: inline-block;
+}
+.borderbox2 {
+width: 140px;
+height: 80px;
+background-color: gray;
+border: 1px solid black;
+display: inline-block;
+margin-left: 10px;
+}
+
+.borderbox3 {
+width: 140px;
+height: 80px;
+margin-top: 5px;
+margin-left: 5px;
+margin-bottom: 5px;
+background-color: gray;
+border: 1px solid black;
+
+}
+.line4 {
+border: 1px dashed grey;
+width: 350px;
+margin-left: 550px;
+margin-top: 20px;
+}
+.linetext {
+margin: 20px;
+}
+.parent-two { 
+border: 2px solid grey;
+width: 450px;
+margin-left: 500px;
+
+}
+
+.box-one {
+width: 130px;
+height: 80px;
+margin-top: 5px;
+margin-left: 15px;
+margin-top: 5px;
+background-color: grey;
+border: 1px solid black;
+display: inline-block;
+}
+.box-two {
+width: 130px;
+height: 80px;
+margin-left: 5px;
+background-color: grey;
+border: 1px solid black;
+display: inline-block;
+}
+.box-three {
+width: 130px;
+height: 80px;
+margin-left: 5px;
+background-color: grey;
+border: 1px solid black;
+display: inline-block;
+}
+
+
+
+
+
+ 
+ 
+
+
+
